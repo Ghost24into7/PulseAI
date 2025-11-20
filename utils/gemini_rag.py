@@ -36,9 +36,9 @@ class GeminiRAG:
         
         genai.configure(api_key=self.api_key)
         
-        # Use Flash 1.5 - free tier with 1M context
+        # Use Gemini 2.5 Flash - latest model with enhanced capabilities
         self.model = genai.GenerativeModel(
-            'gemini-1.5-flash',
+            'gemini-2.5-flash',
             generation_config={
                 'temperature': 0.7,
                 'top_p': 0.95,
