@@ -21,13 +21,13 @@
 
 ## 🎯 Overview
 
-**PulseAI** is an enterprise-grade, zero-GPU financial intelligence platform built specifically for the Indian market. It leverages Google Gemini's 1.5 Flash model with a 1-million token context window to deliver real-time insights from India's top financial institutions—RBI, NPCI, NSE, and AMFI—without requiring any vector database infrastructure.
+**PulseAI** is an enterprise-grade, zero-GPU financial intelligence platform built specifically for the Indian market. It leverages Google Gemini's 2.5 Flash model with a 1-million token context window to deliver real-time insights from India's top financial institutions—RBI, NPCI, NSE, and AMFI—without requiring any vector database infrastructure.
 
 ### ✨ What Makes PulseAI Unique?
 
 ```
 💰 Zero Cost Infrastructure  →  CPU-only, no GPU required
-🤖 Free AI-Powered RAG      →  Gemini 1.5 Flash (15 req/min)
+🤖 Free AI-Powered RAG      →  Gemini 2.5 Flash (15 req/min)
 🗄️  No Database Overhead     →  Pure 1M context stuffing
 ☁️  Deploy in 60 Seconds    →  One-click Streamlit Cloud
 🎨 RBI-Grade Interface      →  Premium navy + gold design
@@ -40,91 +40,91 @@
 
 ## 🏗️ System Architecture
 
-```
-┌────────────────────────────────────────────────────────────────┐
-│                      PulseAI Architecture                       │
-│                    CPU-Only • Zero-GPU Design                   │
-└────────────────────────────────────────────────────────────────┘
+```mermaid
+graph TB
+    subgraph Frontend["🎨 FRONTEND LAYER"]
+        UI[Streamlit Multi-Page App v1.39.0]
+        CSS[Custom CSS<br/>200+ lines glassmorphism]
+        Charts[Plotly Interactive Charts]
+        Mobile[Mobile-First Responsive Design]
+    end
 
-┌──────────────────────────────────────────────────────────────────┐
-│                        FRONTEND LAYER                             │
-│  ┌────────────────────────────────────────────────────────────┐  │
-│  │   Streamlit Multi-Page App (1.39.0)                        │  │
-│  │   • Custom CSS (200+ lines glassmorphism)                  │  │
-│  │   • Plotly Interactive Charts                               │  │
-│  │   • Mobile-First Responsive Design                          │  │
-│  └────────────────────────────────────────────────────────────┘  │
-└──────────────────────────────────────────────────────────────────┘
-                                ↓
-┌──────────────────────────────────────────────────────────────────┐
-│                      APPLICATION LAYER                            │
-│  ┌────────────┐  ┌────────────┐  ┌────────────┐  ┌───────────┐  │
-│  │ Dashboard  │  │ India Map  │  │  AI Chat   │  │ Forecasts │  │
-│  │   Page     │  │   Page     │  │    Page    │  │   Page    │  │
-│  └────────────┘  └────────────┘  └────────────┘  └───────────┘  │
-│         ↓               ↓               ↓              ↓          │
-│  ┌──────────────────────────────────────────────────────────┐   │
-│  │              Report Generator (PPT)                       │   │
-│  │         python-pptx • RBI-Themed Templates               │   │
-│  └──────────────────────────────────────────────────────────┘   │
-└──────────────────────────────────────────────────────────────────┘
-                                ↓
-┌──────────────────────────────────────────────────────────────────┐
-│                       DATA PROCESSING LAYER                       │
-│  ┌────────────────────────────────────────────────────────────┐  │
-│  │  Smart Data Downloader (24h Cache)                         │  │
-│  │  • Polite scraping (5s delay)                              │  │
-│  │  • Automatic retry logic                                   │  │
-│  │  • CSV/Excel processing                                    │  │
-│  └────────────────────────────────────────────────────────────┘  │
-│                              ↓                                    │
-│  ┌────────────────────────────────────────────────────────────┐  │
-│  │         Time-Series Forecasting Engine                     │  │
-│  │         • Exponential smoothing                             │  │
-│  │         • Trend decomposition                               │  │
-│  │         • 95% confidence intervals                          │  │
-│  └────────────────────────────────────────────────────────────┘  │
-└──────────────────────────────────────────────────────────────────┘
-                                ↓
-┌──────────────────────────────────────────────────────────────────┐
-│                          AI/RAG LAYER                             │
-│  ┌────────────────────────────────────────────────────────────┐  │
-│  │        Google Gemini 1.5 Flash (Free Tier)                 │  │
-│  │        • 1 Million Token Context Window                     │  │
-│  │        • 15 Requests/Minute Rate Limit                      │  │
-│  │        • Built-in Rate Limiting (4s delay)                  │  │
-│  └────────────────────────────────────────────────────────────┘  │
-│                              ↓                                    │
-│  ┌────────────────────────────────────────────────────────────┐  │
-│  │          RAG Engine (Zero Vector DB)                        │  │
-│  │          • 700K+ tokens financial context                   │  │
-│  │          • Intelligent chunking & metadata                  │  │
-│  │          • Streaming responses                              │  │
-│  │          • Multi-language (English + Hindi)                │  │
-│  └────────────────────────────────────────────────────────────┘  │
-└──────────────────────────────────────────────────────────────────┘
-                                ↓
-┌──────────────────────────────────────────────────────────────────┐
-│                        DATA SOURCES LAYER                         │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────────┐    │
-│  │   RBI    │  │   NPCI   │  │   NSE    │  │     AMFI     │    │
-│  │   DBIE   │  │   UPI    │  │  Stocks  │  │  Mutual Fund │    │
-│  │ Database │  │ Reports  │  │  API     │  │     AUM      │    │
-│  └──────────┘  └──────────┘  └──────────┘  └──────────────┘    │
-│      ↓              ↓             ↓               ↓              │
-│  Banking       Digital       Stock Market    Investment         │
-│  Credit &      Payment       Performance     Trends             │
-│  Deposits      Stats         Data            Analysis           │
-└──────────────────────────────────────────────────────────────────┘
+    subgraph Application["⚙️ APPLICATION LAYER"]
+        Dashboard[📊 Dashboard Page<br/>Real-time Metrics]
+        IndiaMap[🇮🇳 India Map Page<br/>Geographic Analysis]
+        AIChat[💬 AI Chat Page<br/>RAG Q&A]
+        Forecast[🔮 Forecasting Page<br/>30-Day Predictions]
+        ReportGen[📑 Report Generator<br/>PowerPoint • RBI Theme]
+    end
 
-┌──────────────────────────────────────────────────────────────────┐
-│                        SECURITY LAYER                             │
-│  • .env file with python-dotenv                                  │
-│  • Comprehensive .gitignore (100+ rules)                         │
-│  • No API keys in code                                           │
-│  • Sensitive data excluded from git                              │
-│  • Rate limiting & error handling                                │
-└──────────────────────────────────────────────────────────────────┘
+    subgraph DataProcessing["🔧 DATA PROCESSING LAYER"]
+        Downloader[Smart Data Downloader<br/>24h Cache • Polite Scraping]
+        Forecaster[Time-Series Engine<br/>Exponential Smoothing<br/>95% Confidence Intervals]
+    end
+
+    subgraph AILayer["🤖 AI/RAG LAYER"]
+        Gemini[Google Gemini 2.5 Flash<br/>1M Token Context<br/>15 RPM Free Tier]
+        RAG[RAG Engine<br/>Zero Vector DB<br/>700K+ Token Context]
+    end
+
+    subgraph DataSources["📊 DATA SOURCES"]
+        RBI[RBI DBIE<br/>Banking Credit/Deposits<br/>Monetary Policy]
+        NPCI[NPCI<br/>UPI Transactions<br/>Digital Payments]
+        NSE[NSE<br/>Stock Indices<br/>Market Data]
+        AMFI[AMFI<br/>Mutual Fund AUM<br/>Investor Accounts]
+    end
+
+    subgraph Security["🔒 SECURITY LAYER"]
+        ENV[.env File<br/>API Key Management]
+        GitIgnore[.gitignore<br/>100+ Security Rules]
+    end
+
+    %% Frontend connections
+    UI --> Dashboard
+    UI --> IndiaMap
+    UI --> AIChat
+    UI --> Forecast
+    CSS --> UI
+    Charts --> UI
+    Mobile --> UI
+
+    %% Application to Data Processing
+    Dashboard --> Downloader
+    IndiaMap --> Downloader
+    Forecast --> Downloader
+    Forecast --> Forecaster
+    ReportGen --> Downloader
+
+    %% AI connections
+    AIChat --> RAG
+    ReportGen --> RAG
+    Forecast --> RAG
+    RAG --> Gemini
+
+    %% Data sources to Downloader
+    RBI --> Downloader
+    NPCI --> Downloader
+    NSE --> Downloader
+    AMFI --> Downloader
+
+    %% Security connections
+    ENV --> Gemini
+    GitIgnore -.->|protects| ENV
+
+    %% Styling
+    classDef frontend fill:#FF4B4B,stroke:#fff,stroke-width:2px,color:#fff
+    classDef app fill:#0f1b3d,stroke:#d4af37,stroke-width:2px,color:#fff
+    classDef data fill:#2c3e50,stroke:#3498db,stroke-width:2px,color:#fff
+    classDef ai fill:#4285F4,stroke:#fff,stroke-width:2px,color:#fff
+    classDef source fill:#27ae60,stroke:#fff,stroke-width:2px,color:#fff
+    classDef security fill:#e74c3c,stroke:#fff,stroke-width:2px,color:#fff
+
+    class UI,CSS,Charts,Mobile frontend
+    class Dashboard,IndiaMap,AIChat,Forecast,ReportGen app
+    class Downloader,Forecaster data
+    class Gemini,RAG ai
+    class RBI,NPCI,NSE,AMFI source
+    class ENV,GitIgnore security
 ```
 
 ### 🔄 Data Flow
@@ -194,7 +194,7 @@
 │  │   (Banking)     │   (Payments)     │   (Markets)      │ │
 │  └─────────────────┴──────────────────┴──────────────────┘ │
 │         ↓                                                     │
-│  [Gemini 1.5 Flash] → 1M Context RAG (No Vector DB)         │
+│  [Gemini 2.5 Flash] → 1M Context RAG (No Vector DB)         │
 │         ↓                                                     │
 │  [Analysis & Forecasting] → Exponential Smoothing            │
 │         ↓                                                     │
@@ -205,7 +205,7 @@
 
 **Tech Stack:**
 - **Frontend:** Streamlit 1.39.0, Plotly, Custom CSS
-- **AI:** Google Gemini 1.5 Flash (free tier)
+- **AI:** Google Gemini 2.5 Flash (free tier)
 - **Data:** Pandas, NumPy, Requests
 - **Reports:** python-pptx
 - **Deployment:** CPU-only, no Docker needed
@@ -365,7 +365,7 @@ https://yourapp.streamlit.app
 ### AI/ML
 | Technology | Purpose | Version |
 |------------|---------|---------|
-| **Google Gemini 1.5 Flash** | LLM (RAG) | Free tier |
+| **Google Gemini 2.5 Flash** | LLM (RAG) | Free tier |
 | **Statsmodels** | Forecasting | 0.14.4 |
 
 ### Automation
