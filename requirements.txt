@@ -1,0 +1,36 @@
+# PulseAI Requirements
+# Python 3.9+ compatible
+# All versions pinned for reproducibility (November 2025)
+
+# Core Framework
+streamlit
+# Data Processing
+pandas
+numpy
+
+# Visualization
+plotly
+
+# AI/ML
+google-generativeai
+
+# Time Series (for Prophet-style forecasting)
+# Using lightweight alternatives instead of Prophet to avoid C++ dependencies
+statsmodels
+
+# PowerPoint Generation
+python-pptx
+Pillow
+
+# HTTP Requests
+requests
+
+# Environment Variables (for .env file support)
+python-dotenv
+
+# Utilities
+python-dateutil
+pytz
+
+# Optional: For better data handling
+openpyxl

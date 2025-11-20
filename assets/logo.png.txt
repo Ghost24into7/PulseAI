@@ -1,0 +1,27 @@
+# Create a simple text-based logo placeholder
+# In production, you'd use an actual PNG image
+# This is a placeholder that can be replaced with a professional logo
+
+PulseAI Logo Placeholder
+=========================
+
+This file should be replaced with an actual logo image (PNG format).
+
+Recommended specifications:
+- Format: PNG with transparency
+- Size: 512x512 pixels
+- Color scheme: Navy Blue (#0f1b3d) and Gold (#d4af37)
+- Design: Modern fintech aesthetic with pulse/wave motif
+- Text: "PulseAI" in bold, premium font
+
+You can create a logo using:
+1. Canva (https://www.canva.com/)
+2. Figma (https://www.figma.com/)
+3. Adobe Express
+4. Or hire a designer on Fiverr
+
+Logo design brief:
+- Combine a financial chart/pulse wave with Indian elements
+- Use gradient from navy to blue
+- Gold accent for premium feel
+- Clean, minimalist, corporate-friendly

@@ -1,0 +1,192 @@
+# ====================================
+# SECURITY - NEVER COMMIT THESE FILES
+# ====================================
+
+# Environment variables with API keys and secrets
+.env
+.env.*
+!.env.example
+
+# Streamlit secrets (contains API keys)
+.streamlit/secrets.toml
+
+# Any private keys or credentials
+*.key
+*.pem
+*.p12
+*.pfx
+secrets.*
+credentials.*
+config.ini
+
+# ====================================
+# PYTHON
+# ====================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ====================================
+# VIRTUAL ENVIRONMENT
+# ====================================
+
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# ====================================
+# IDE & EDITORS
+# ====================================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# ====================================
+# DATA FILES (SENSITIVE/LARGE)
+# ====================================
+
+# Don't commit cached data (can be re-downloaded)
+data/raw/*.csv
+data/raw/*.xlsx
+data/raw/*.xls
+data/raw/*.json
+data/raw/*.pdf
+data/processed/*.csv
+data/processed/*.parquet
+
+# Keep directory structure
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Any database files
+*.db
+*.sqlite
+*.sqlite3
+
+# ====================================
+# OPERATING SYSTEM
+# ====================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ====================================
+# LOGS & TEMPORARY FILES
+# ====================================
+
+*.log
+logs/
+*.tmp
+*.bak
+*.swp
+*.cache
+.pytest_cache/
+
+# ====================================
+# JUPYTER NOTEBOOK
+# ====================================
+
+.ipynb_checkpoints/
+*.ipynb
+
+# ====================================
+# TESTING
+# ====================================
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# ====================================
+# GENERATED REPORTS & OUTPUTS
+# ====================================
+
+# Generated PowerPoint files (can be large)
+*.pptx
+!assets/rbi_template.pptx
+
+# Generated PDFs
+*.pdf
+
+# ====================================
+# PACKAGE MANAGERS
+# ====================================
+
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Poetry
+poetry.lock
+
+# Pipenv
+Pipfile.lock
+
+# ====================================
+# MISC
+# ====================================
+
+# Backup files
+*.backup
+*~
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
