@@ -13,8 +13,6 @@
 [![Gemini AI](https://img.shields.io/badge/Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-**🚀 [Live Demo](#) • 📖 [Documentation](#-features) • 💬 [Get Support](https://github.com/Ghost24into7/PulseAI/issues)**
-
 </div>
 
 ---
@@ -182,24 +180,24 @@ graph TB
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     PulseAI Architecture                     │
+│                     PulseAI Architecture                    │
 ├─────────────────────────────────────────────────────────────┤
-│                                                               │
+│                                                             │
 │  [Streamlit UI] ← Custom CSS (Glassmorphism + RBI Theme)    │
-│         ↓                                                     │
+│         ↓                                                   │
 │  [Data Layer] → Smart Caching (24h) + Polite Scraping       │
-│         ↓                                                     │
-│  ┌─────────────────┬──────────────────┬──────────────────┐ │
-│  │   RBI DBIE      │   NPCI UPI       │   NSE Stocks     │ │
-│  │   (Banking)     │   (Payments)     │   (Markets)      │ │
-│  └─────────────────┴──────────────────┴──────────────────┘ │
-│         ↓                                                     │
+│         ↓                                                   │
+│  ┌─────────────────┬──────────────────┬──────────────────┐  │
+│  │   RBI DBIE      │   NPCI UPI       │   NSE Stocks     │  │
+│  │   (Banking)     │   (Payments)     │   (Markets)      │  │
+│  └─────────────────┴──────────────────┴──────────────────┘  │
+│         ↓                                                   │
 │  [Gemini 2.5 Flash] → 1M Context RAG (No Vector DB)         │
-│         ↓                                                     │
-│  [Analysis & Forecasting] → Exponential Smoothing            │
-│         ↓                                                     │
-│  [PowerPoint Generator] → python-pptx with RBI Template      │
-│                                                               │
+│         ↓                                                   │
+│  [Analysis & Forecasting] → Exponential Smoothing           │
+│         ↓                                                   │
+│  [PowerPoint Generator] → python-pptx with RBI Template     │
+│                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -297,52 +295,6 @@ You should now see:
 6. Click **"Deploy"**
 
 7. Wait 2-3 minutes → Your app is live! 🚀
-
-### 🔗 Your Live URL
-```
-https://yourapp.streamlit.app
-```
-
----
-
-## 📸 Screenshots & Demo
-
-<div align="center">
-
-### 🏠 Interactive Dashboard
-<img src="https://via.placeholder.com/800x450/0f1b3d/d4af37?text=Real-Time+Dashboard+%7C+UPI+Trends+%7C+State+Rankings" alt="Dashboard" width="80%">
-
-*Live metrics, UPI trends, state-wise rankings, and stock performance*
-
----
-
-### 🇮🇳 Geographic Analysis
-<img src="https://via.placeholder.com/800x450/0f1b3d/4267B2?text=India+Choropleth+Map+%7C+State+Drill-Down" alt="India Map" width="80%">
-
-*Interactive choropleth map with credit growth, deposits, and digital adoption*
-
----
-
-### 💬 AI-Powered Chat
-<img src="https://via.placeholder.com/800x450/0f1b3d/2ecc71?text=Ask+RBI+Chat+%7C+RAG+with+1M+Context" alt="AI Chat" width="80%">
-
-*RAG-based chatbot supporting English & Hindi queries*
-
----
-
-### 📊 Automated Reports
-<img src="https://via.placeholder.com/800x450/0f1b3d/e74c3c?text=One-Click+PowerPoint+%7C+RBI+Themed" alt="Reports" width="80%">
-
-*Generate boardroom presentations in 15 seconds*
-
----
-
-### 🔮 Forecasting Engine
-<img src="https://via.placeholder.com/800x450/0f1b3d/9b59b6?text=30-Day+Forecasts+%7C+AI+Narratives" alt="Forecasting" width="80%">
-
-*Time-series predictions with AI-generated business insights*
-
-</div>
 
 ---
 
@@ -572,26 +524,11 @@ This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file
 
 *Full-Stack Data Scientist | AI/ML Engineer | Fintech Enthusiast*
 
-[![GitHub](https://img.shields.io/badge/GitHub-Ghost24into7-181717?style=for-the-badge&logo=github)](https://github.com/Ghost24into7)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/yourprofile)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail)](mailto:your.email@example.com)
-
 **🌟 If PulseAI helped you, please star this repository!**
 
 [![Star History](https://img.shields.io/github/stars/Ghost24into7/PulseAI?style=social)](https://github.com/Ghost24into7/PulseAI/stargazers)
 
 </div>
-
----
-
-## 📞 Support & Contact
-
-- **🐛 Bug Reports:** [GitHub Issues](https://github.com/Ghost24into7/PulseAI/issues)
-- **💡 Feature Requests:** [GitHub Discussions](https://github.com/Ghost24into7/PulseAI/discussions)
-- **📧 Email:** myron.correia@example.com
-- **💬 Discussions:** [Join our community](https://github.com/Ghost24into7/PulseAI/discussions)
-
----
 
 <div align="center">
 
